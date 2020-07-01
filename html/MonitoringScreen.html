@@ -10,7 +10,8 @@
 
     <title>Monitoramento</title>
   </head>
-  <body>
+  <body onload="aaa()">
+	<script src="../script/MonitoringScreen.js"></script>
 		<h1>HopStar</h1>
 		<hr />
 
@@ -31,7 +32,7 @@
 							<h6><label class ="">Sexo: M</label></h5>
 							<h6><label class ="">End: Santo Antonio do Descoberto - GO</label></h5>
 							<h6><label class ="">Idade: 20</label></h5>
-							<h6><label class ="">Temperatura Padrão: 37</label></h6>
+							<h6><label class ="TemperaturaPadrao">Temperatura Padrão: 37</label></h6>
 							<h6><label class ="PressãoPadraoSistolica">Pressão Sistólica Padrão: 120</label></h6>
               <h6><label class ="PressãoPadraoDiastolica">Pressão Diastólica Padrão: 80</label></h6>
 						</div>
@@ -48,19 +49,17 @@
 					<div class="col-sm-4">
 							<div class = "card">
 								<div class = "card-body" id = "pressaoSistolica">
-									<script class="GerarPressaoSistolica">
-                      document.getElementById("pressaoSistolica").innerHTML = randomNumber(120,140); 
-                  </script>
+									<script>
+										function aaa(){
+											
+										} 
+									</script>
 								</div>
 							</div>
 						</div>
 					<div class="col-sm-4">
 						<div class = "card">
-							<div class = "card-body" id = "pressaoDiastolica">
-                <script>
-                  document.getElementById("pressaoDiastolica").innerHTML = randomNumber(80,90);
-                </script>
-							</div>
+							<div class = "card-body" id = "pressaoDiastolica"></div>
 						</div>
 					</div>
 			</div>
@@ -68,11 +67,7 @@
 			<div class = "row mb-2">
 				<div class="col-sm-4">
 					<div class = "card">
-						<div class = "card-body" id = "Temperatura">
-              <script>
-                document.getElementById("Temperatura").innerHTML = randomNumber(33,40) + "°C";
-              </script>
-						</div>
+						<div class = "card-body" id = "Temperatura"></div>
 					</div>
 				</div>
 			</div>
