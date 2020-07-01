@@ -1,0 +1,99 @@
+<html>
+<head>
+    <script type="text/javascript" src="script/HistoricScreen.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+    <title>Cadastrar Paciente</title>
+</head>
+    <body>
+    
+        <div class="container mt-5 col-md-7">
+            <div class="card text-center">
+                <div class="card-body align-items-center">
+                    <h2>Cadastrar Paciente</h2>
+                    <form action="javascript:addUser()" class="mt-5">
+                        <div class="text-left">
+
+                            <div class="form-group row center-block col-sm-12">
+                                <div class="form-group col-sm-8">
+                                    <label class="">Nome</label>
+                                    <div class="" required>
+                                        <input type="text" class="form-control" name="name" placeholder="Digite o nome do paciente"
+                                            id="name" title="Preencha este campo com atenção, seu paciente não vai gostar de você errar o nome dele" required>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group col-sm-2">
+                                    <label class="">Idade</label>
+                                    <div class="">
+                                        <input type="number" class="form-control" name="age" id="age"
+                                            placeholder="00" pattern="([0-9]{2})(1[0-9]{2})" title="Digite uma idade válida, apenas números.">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group col-sm-2">
+                                    <label class="">Sexo</label>
+                                    <div class="">
+                                        <select name="sex" id="sex" class="col-sm-12">
+                                            <option value="1">Feminino</option>
+                                            <option value="0">Masculino</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row center-block form-group col-sm-12">
+                                <label class="col-sm-12">Endereco</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" name="address" placeholder="Onde seu paciente mora?"
+                                        id="address" title="Digite um endereco com o maior número de detalhes possíveis" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row center-block form-group col-sm-12">
+        
+                                <div class="form-group col-sm-4">
+                                    <label class="">Pressao Sistólica Padrão</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" name="systolicPressure" placeholder="00-00-00"
+                                            id="systolicPressure" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                                            title="Digite um número com o seguinte padrao: 00-00-00"
+                                            required>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group col-sm-4">
+                                    <label class="">Pressao Diastólica Padrão</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" name="diastolicPressure" placeholder="00-00-00"
+                                            id="diastolicPressure" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                                            title="Digite um número com o seguinte padrao: 00-00-00"
+                                            required>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group col-sm-4">
+                                    <label class="">Temperatura Padrão</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" name="temperature" placeholder="Apenas números"
+                                            id="temperature" pattern="0-9]{2}"
+                                            title="Digite uma temperatura do seu paciente."
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+    
+                        <button type="submit" class="btn btn-success col-sm-5">Cadastrar</button>
+                    </form>
+                    <!-- <h6 class="text-danger">${erro}</h6> -->
+                </div>
+            </div>
+    
+        </div>
+    </body>
+</html>
