@@ -5,6 +5,7 @@
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="../script/MonitoringScreen.js"></script>
 	   <meta charset="UTF-8">
 
     <title>Monitoramento</title>
@@ -30,8 +31,9 @@
 							<h6><label class ="">Sexo: M</label></h5>
 							<h6><label class ="">End: Santo Antonio do Descoberto - GO</label></h5>
 							<h6><label class ="">Idade: 20</label></h5>
-							<h6><label class ="">Temperatura Padrão: 37</label></h5>
-							<h6><label class ="">Pressão Padrão: 120</label></h5>
+							<h6><label class ="">Temperatura Padrão: 37</label></h6>
+							<h6><label class ="PressãoPadraoSistolica">Pressão Sistólica Padrão: 120</label></h6>
+              <h6><label class ="PressãoPadraoDiastolica">Pressão Diastólica Padrão: 80</label></h6>
 						</div>
 						<input type="button" value="Histórico" onClick= "" class="btn btn-secondary">
 				</div>
@@ -45,15 +47,19 @@
 				<div class = "row mb-2">
 					<div class="col-sm-4">
 							<div class = "card">
-								<div class = "card-body">
-									120
+								<div class = "card-body" id = "pressaoSistolica">
+									<script class="GerarPressaoSistolica">
+                      document.getElementById("pressaoSistolica").innerHTML = randomNumber(120,140); 
+                  </script>
 								</div>
 							</div>
 						</div>
 					<div class="col-sm-4">
 						<div class = "card">
-							<div class = "card-body">
-								80
+							<div class = "card-body" id = "pressaoDiastolica">
+                <script>
+                  document.getElementById("pressaoDiastolica").innerHTML = randomNumber(80,90);
+                </script>
 							</div>
 						</div>
 					</div>
@@ -62,8 +68,10 @@
 			<div class = "row mb-2">
 				<div class="col-sm-4">
 					<div class = "card">
-						<div class = "card-body">
-							35°C
+						<div class = "card-body" id = "Temperatura">
+              <script>
+                document.getElementById("Temperatura").innerHTML = randomNumber(33,40) + "°C";
+              </script>
 						</div>
 					</div>
 				</div>
