@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/NavbarStyle.css">
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <title>HopStar</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top justify-content-between">
         <a class="navbar-brand" href="#">HOPSTAR</a> 
-        <div class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <div class="searchbar">
+            <input class="form-control mr-sm-2" type="search" placeholder="Paciente" aria-label="Paciente">
         </div>
+
+        <!-- Exit -->
+        <a class="nav-item logout" href="#">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
     </nav>
 </body>
 </html>
