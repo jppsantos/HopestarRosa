@@ -1,14 +1,17 @@
 <html>
   <head>
-    <script type="text/javascript" src="script/login"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../script/verifyLogin.js"></script>
   </head>
 
   <body>
-    <div>
-        <input type="email" id="txtEmail" placeholder="email@hopstar.com.br" required="required"><br>
-        <input type="password" id="senha" placeholder="12345678" required="required"><br><br><br>
+    <div class="container">
+        <br><input type="email" id="txtEmail" placeholder="email@hopstar.com.br" required="required"><br>
+        <input type="password" id="senha" placeholder="12345678" required="required"><br><br>
         <!-- <input type="button" id="esqueciSenha" value="Esqueci minha senha"><br> -->
-        <input type="button" onClick="" id="btnLogin" value="Login">
+        <input type="button" OnClick="verifyLogin();" id="btnLogin" value="Login">
     </div>
   </body>
 </html>
