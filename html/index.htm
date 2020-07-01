@@ -1,17 +1,36 @@
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleLogin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="../script/verifyLogin.js"></script>
   </head>
 
   <body>
-    <div class="container">
-        <br><input type="email" id="txtEmail" placeholder="email@hopstar.com.br" required="required"><br>
-        <input type="password" id="senha" placeholder="12345678" required="required"><br><br>
-        <!-- <input type="button" id="esqueciSenha" value="Esqueci minha senha"><br> -->
-        <input type="button" OnClick="verifyLogin();" id="btnLogin" value="Login">
+    <div class="container d-flex">
+      <div class="container h-100 d-flex justify-content-center">
+        <div class="jumbotron bg-transparent my-auto" style="background:transparent !important">
+          <div class="card border-0" style="width: 30rem;">
+            <div class="card-body">
+              <div class="text-center">
+                <h1 class="card-title">Login</h5>
+              </div>
+              <br><br><div class="form-group">
+                <label for="txtEmail">Email</label>
+                <input type="email" class="form-control" id="txtEmail" placeholder="email@hopstar.com.br" required="required">
+              </div><br>
+              <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="12345678" required="required">
+              </div><br><br>
+              <div class="text-center">
+                <input type="button" class="btn btn-success text-center" OnClick="verifyLogin();" id="btnLogin" value="Entrar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
