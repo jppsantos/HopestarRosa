@@ -10,8 +10,7 @@
 
     <title>Monitoramento</title>
   </head>
-  <body onload="refreshData()">
-	<script src="../script/MonitoringScreen.js"></script>
+  <body onload="monitoring();">
 		<h1>HopStar</h1>
 		<hr />
 
@@ -25,18 +24,18 @@
 								<path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
 							</svg>
 						</div>
-						<div id = nomePaciente>
-							<h5><label class ="text-">Roberto da Silva Santos Pereira de Souza</label></h4>
-						</div>
 						<div id = dadosPaciente>
-							<h6><label class ="">Sexo: M</label></h5>
-							<h6><label class ="">End: Santo Antonio do Descoberto - GO</label></h5>
-							<h6><label class ="">Idade: 20</label></h5>
-							<h6><label class ="TemperaturaPadrao" id="TemperaturaPadrao">Temperatura Padrão: 37</label></h6>
-							<h6><label class ="PressãoPadraoSistolica" id="PressãoPadraoSistolica">Pressão Sistólica Padrão: 120</label></h6>
-              <h6><label class ="PressãoPadraoDiastolica">Pressão Diastólica Padrão: 80</label></h6>
+              <h5 id="nomePaciente">Roberto da Silva Santos Pereira de Souza</h4>
+              <h6>Sexo: <a id="sexo">M</a></h5>
+              <h6>End: <a id="endereco">Santo Antonio do Descoberto - GO</a></h5>
+              <h6>Idade: <a id="idade">20</a></h5>
+              <h6>Temperatura Padrão: <a id="temperatura">37</a><a> ºC</a></h5>
+              <h6>Pressão Diastólica Padrão: <a id="sistolica">120</a> <a>mmHg</a></h5>
+              <h6>Pressão Sistólica Padrão: <a id="diastolica">90</a> <a>mmHg</a></h5>
 						</div>
-						<input type="button" value="Histórico" onClick= "" class="btn btn-secondary">
+            <div id = "historicButton" class = "invisible">
+              <input type="button" value="Histórico" onClick= "" class="btn btn-secondary">
+            </div>
 				</div>
 			</div>
 		</div>
@@ -49,11 +48,6 @@
 					<div class="col-sm-4">
 							<div class = "card">
 								<div class = "card-body" id = "pressaoSistolica">
-									<script>
-										function aaa(){
-											
-										} 
-									</script>
 								</div>
 							</div>
 						</div>
@@ -67,7 +61,7 @@
 			<div class = "row mb-2">
 				<div class="col-sm-4">
 					<div class = "card">
-						<div class = "card-body" id = "Temperatura"></div>
+						<div class = "card-body" id = "temperaturaCard"></div>
 					</div>
 				</div>
 			</div>
