@@ -39,12 +39,38 @@ function refreshData(){
 }
 
 function monitoring(){
-  $(document).ready(function(){
-        setInterval(function(){
-            document.getElementById('pressaoSistolica').innerHTML = randomNumber(120-5,120+3);
-            document.getElementById('pressaoDiastolica').innerHTML = randomNumber(80-5,80+3);
-            document.getElementById('temperaturaCard').innerHTML = randomNumber(33-5,33+3);
-            var date = new Date();
-        }, 3000);
-    });
+    var array = [];
+    var stop = setInterval( function() { gerarDados(array); },4000);
+
+    function gerarDados(array) {
+        var sis = randomNumber(120-10,120+1);
+        var dis = randomNumber(80-10,80+1);
+        var temp = randomNumber(33-10,33+1);
+
+        document.getElementById('pressaoSistolica').innerHTML = sis;
+        document.getElementById('pressaoDiastolica').innerHTML = dis;
+        document.getElementById('temperaturaCard').innerHTML = temp;
+
+        if(sis > 120 || dis > 80 || temp > 33) {
+          alert("WARNING!!");
+          document.getElementById("historicButton").className  = "visible";
+          clearInterval(stop);
+        }
+
+        var date = new Date();
+
+        var dados = {sistolica: sis , diastolica: dis, temperatura: temp, data: date}; // Cria um array com "members"
+
+        array.unshift(dados); //Adiciona no inicio do array
+
+        if(array.length == 5) {
+          array.pop(); //Remove o utlimo elemento
+        }
+
+        //Validar Tempertura e pressoes
+        //Alerta Com o pop-up
+        //Liberar historicButton
+        // Ver uma forma de enviar esse array para o historico
+
+      }
 }
