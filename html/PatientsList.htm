@@ -10,6 +10,24 @@
     <title>HopStar</title>
 </head>
 <body>
+    <div>
+        <nav class="navbar navbar-expand-sm bg-light justify-content-between">
+            <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a> 
+            <div class="form-inline">
+                <form action="javascript:search(search.value);">
+                  <input class="form-control col " name="search" style="min-width:500px;" type="search" placeholder="Pesquise um paciente..."
+                    id="search" aria-label="Pesquise um paciente..." required>
+                  <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+    
+            <!-- Exit -->
+            <a class="nav-item logout" href="index.htm">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+    </div>
     <div class="card-columns">
         <div class="card">
             <div class="add-patient">
