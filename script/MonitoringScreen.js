@@ -34,7 +34,7 @@ function refreshData(){
             if(!validationPressaoSis || !validationPressaoDia || !validationTemp){
                 //Chama pop-up
             }
-        }, 3000);
+        }, 1000);
     });
 }
 
