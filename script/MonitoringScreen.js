@@ -47,9 +47,9 @@ function monitoring(){
         var dis = randomNumber(80-10,80+1);
         var temp = randomNumber(33-10,33+1);
 
-        document.getElementById('pressaoSistolica').innerHTML = sis;
-        document.getElementById('pressaoDiastolica').innerHTML = dis;
-        document.getElementById('temperaturaCard').innerHTML = temp;
+        document.getElementById('pressaoSistolica').value = sis;
+        document.getElementById('pressaoDiastolica').value = dis;
+        document.getElementById('temperaturaCard').value = temp;
 
         if(sis > 120 || dis > 80 || temp > 33) {
           alert("WARNING!!");

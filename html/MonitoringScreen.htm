@@ -1,88 +1,92 @@
 <html>
-  <head>
-    <script type="text/javascript" src="script/HistoricScreen.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="../script/MonitoringScreen.js"></script>
-	   <meta charset="UTF-8">
 
-    <title>Monitoramento</title>
-  </head>
-  <body onload="monitoring();">
-		<h1>HopStar</h1>
-		<hr />
+<head>
+	<script type="text/javascript" src="script/HistoricScreen.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="../script/MonitoringScreen.js"></script>
+	<meta charset="UTF-8">
 
-		<div>
-            <nav class="navbar navbar-expand-sm bg-light justify-content-between">
-                <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a> 
-                <!-- Exit -->
-                <a class="nav-item logout" href="index.htm">
-                    <i class="fa fa-sign-out" aria-hidden="true"></i>
-                </a>
-            </nav>
-		</div>
-		
-		<div class="card">
-		<div class="row">
-			<div class="col-sm-5">
-				<div class = "card-body" style="width: 60rem;">
-					<div class="card col-sm-4">
-						<div class="text-center">
-							<svg class="bi bi-person" width="10em" height="10em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-							</svg>
-						</div>
-						<div id = dadosPaciente>
-              <h5 id="nomePaciente">Roberto da Silva Santos Pereira de Souza</h4>
-              <h6>Sexo: <a id="sexo">M</a></h5>
-              <h6>End: <a id="endereco">Santo Antonio do Descoberto - GO</a></h5>
-              <h6>Idade: <a id="idade">20</a></h5>
-              <h6>Temperatura Padrão: <a id="temperatura">37</a><a> ºC</a></h5>
-              <h6>Pressão Diastólica Padrão: <a id="sistolica">120</a> <a>mmHg</a></h5>
-              <h6>Pressão Sistólica Padrão: <a id="diastolica">90</a> <a>mmHg</a></h5>
-						</div>
-            <div id = "historicButton" class = "invisible">
-              <input type="button center" value="Histórico" onClick= "location.href = 'HistoricScreen.htm';" class="btn btn-primary">
-            </div>
-				</div>
-			</div>
-		</div>
-			<div class="col-sm-5">
-				<br>
+	<title>Monitoramento</title>
+</head>
 
-				<div class="container">
-				<h6 class="card-title">Pressão</h4>
-				<div class = "row mb-2">
+<body onload="monitoring();">
+	<div>
+		<nav class="navbar navbar-expand-sm bg-light justify-content-between">
+			<a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a>
+			<!-- Exit -->
+			<a class="nav-item logout" href="index.htm">
+				<i class="fa fa-sign-out" aria-hidden="true"></i>
+			</a>
+		</nav>
+	</div>
+	<div>
+	</div>
+	<div class="container mt-5 col-md-8">
+		<div class="card text-center">
+			<div class="card-body align-items-center">
+				<h2>Monitoramento</h2>
+				<div class="row">
 					<div class="col-sm-4">
-							<div class = "card">
-								<div class = "card-body" id = "pressaoSistolica">
+						<div class="card-body" style="width: 70rem;">
+							<div class="card col-sm-4">
+								<div class="text-center mt-3">
+									<!-- <svg class="bi bi-person" width="10em" height="10em" viewBox="0 0 16 16" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+							  d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+						  </svg> -->
+									<i class="fas fa-user fa-8x"></i>
 								</div>
+								<div id=dadosPaciente class="text-center mt-3">
+									<h3 id="nomePaciente">Roberto da Silva Santos Pereira de Souza</h3>
+									<div id=dadosPaciente class="text-left mt-3">
+										<label class="font-weight-bold">Idade: </label>
+										<label id="idade">20</label>
+										<label class="font-weight-bold">Sexo: </label>
+										<label id="sexo">M</label><br>
+										<label class="font-weight-bold">End: </label>
+										<label id="endereco">Santo Antonio do Descoberto - GO</label><br>
+										<label class="font-weight-bold">Temperatura Padrão: </label>
+										<label id="temperatura">37</label><br>
+										<label class="font-weight-bold">Pressão Diastólica Padrão: </label>
+										<label id="diastolica">120 mmHg</label><br>
+										<label class="font-weight-bold">Pressão Sistólica Padrão: </label>
+										<label id="sistolica">90 mmHg</label><br>
+									</div>
+								</div>
+								<input type="button" value="Monitorar" onClick="location.href = 'MonitoringScreen.htm';"
+									class="btn btn-primary row">
 							</div>
 						</div>
-					<div class="col-sm-4">
-						<div class = "card">
-							<div class = "card-body" id = "pressaoDiastolica"></div>
-						</div>
 					</div>
-			</div>
-			<h6 class="card-title">Temperatura</h4>
-			<div class = "row mb-2">
-				<div class="col-sm-4">
-					<div class = "card">
-						<div class = "card-body" id = "temperaturaCard"></div>
+
+					<div class="container col-sm-4 text-left mt-5">
+						<label class="font-weight-bold">
+							<h3>Pressão</h3>
+						</label>
+						<input id="pressaoSistolica" type="text" class="form-control" readonly>
+						<input id="pressaoDiastolica" type="text" class="form-control mt-3" readonly>
+						<label class="font-weight-bold mt-3">
+							<h3>Temperatura</h3>
+						</label>
+						<input id="temperaturaCard" type="text" class="form-control" readonly>
 					</div>
 				</div>
 			</div>
 		</div>
-			</div>
+	</div>
 	</div>
 	</div>
 
-  </body>
+</body>
+
 </html>
 
 
 </body>
+
 </html>
