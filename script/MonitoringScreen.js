@@ -40,7 +40,7 @@ function refreshData(){
 
 function monitoring(){
     var array = [];
-    var stop = setInterval( function() { gerarDados(array); },4000);
+    var stop = setInterval( function() { gerarDados(array); },1000);
 
     function gerarDados(array) {
         var sis = randomNumber(120-10,120+1);
