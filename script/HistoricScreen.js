@@ -1,4 +1,4 @@
-var array = [];
+var array;
 
 function mostraPressoes() {
   var lista = document.getElementById('lista');
@@ -54,7 +54,8 @@ function mostraDadosPaciente(){
   var diastolica = document.getElementById('diastolica');
   var sistolica = document.getElementById('sistolcia');
 
-  mostraPressoes();
+  setArray();
+  pressoes();
 }
 
 function setArray(){
