@@ -4,6 +4,7 @@
 	<script type="text/javascript" src="script/HistoricScreen.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="../css/PatientListStyle.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -28,7 +29,7 @@
 	<div class="container mt-5 col-md-8">
 		<div class="card text-center">
 			<div class="card-body align-items-center">
-				<h2>Monitoramento</h2>
+				<h1>Monitoramento</h1>
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="card-body" style="width: 70rem;">
@@ -57,9 +58,13 @@
 										<label class="font-weight-bold">Pressão Sistólica Padrão: </label>
 										<label id="sistolica">90 mmHg</label><br>
 									</div>
+									<input type="button" value="Monitorar"
+										onClick="location.href = 'MonitoringScreen.htm';"
+										class="btn btn-primary col-sm-12">
+
 								</div>
-								<input type="button" value="Monitorar" onClick="location.href = 'MonitoringScreen.htm';"
-									class="btn btn-primary row">
+								<br>
+
 							</div>
 						</div>
 					</div>

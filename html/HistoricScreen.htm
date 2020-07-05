@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="../css/PatientListStyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <scrit src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
     </script>
@@ -27,7 +27,7 @@
   <div class="container mt-5 col-md-8">
     <div class="card text-center">
       <div class="card-body align-items-center">
-        <h2>Histórico de Temperaturas</h2>
+        <h1>Histórico de Temperaturas</h1>
         <div class="row">
           <div class="col-sm-4">
             <div class="card-body" style="width: 70rem;">
@@ -58,17 +58,18 @@
                   </div>
                 </div>
                 <input type="button" value="Monitorar" onClick="location.href = 'MonitoringScreen.htm';"
-                  class="btn btn-primary row">
+                  class="btn btn-primary ">
+                  <br>
               </div>
             </div>
           </div>
 
-          <div class="container col-sm-8 text-center">
+          <div class="container col-sm-8 text-center mt-5">
             <br>
             <input type="button" value="Pressão" onclick="mostraPressoes();" class="btn btn-outline-secondary col-sm-3">
             <input type="button" value="Temperatura" onclick="mostraTemperaturas();"
               class="btn btn-outline-secondary col-sm-3">
-            <br><br><br>
+            <br><br>
             <div id="lista">
               <!-- <h5 id="datetime">20/07 - 19:45 - <a id="diastolica">130 mmHg</a><a id="sistolica"> e 80 mmHg</a></h5><br>
           <h5 id="datetime">20/07 - 19:45 - <a id="diastolica">130 mmHg</a><a id="sistolica"> e 80 mmHg</a></h5><br>
