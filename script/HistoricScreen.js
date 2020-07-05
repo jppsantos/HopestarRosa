@@ -1,3 +1,5 @@
+var array = [];
+
 function mostraPressoes() {
   var lista = document.getElementById('lista');
   while (lista.firstChild) {
@@ -8,6 +10,26 @@ function mostraPressoes() {
   h5.innerHTML = '20/07 - 19:45 - 37°C';
 
   lista.appendChild(h5);
+}
+
+function pressoes(){
+  var lista = document.getElementById('lista');
+  var h;
+  for (let index = 0; index < array.diastolica.length; index++) { 
+    h = document.createElement('h');
+    h.innerHTML = array.data[index] + ' - ' + array.diastolica[index] + ' - ' + array.sistolica[index];
+    lista.appendChild(h);
+  }
+}
+
+function temperaturas(){
+  var lista = document.getElementById('lista');
+  var h;
+  for (let index = 0; index < array.temperatura.length; index++) { 
+    h = document.createElement('h');
+    h.innerHTML = array.data[index]+' - ' + array.temperatura[index];
+    lista.appendChild(h);
+  }
 }
 
 function mostraTemperaturas(){
@@ -33,4 +55,8 @@ function mostraDadosPaciente(){
   var sistolica = document.getElementById('sistolcia');
 
   mostraPressoes();
+}
+
+function setArray(){
+  array = JSON.parse(localStorage.getItem('arrayDeValoresDoPaciente'));
 }

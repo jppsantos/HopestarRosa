@@ -45,13 +45,16 @@ function monitoring(){
     function gerarDados(array) {
         var sis = randomNumber(120-10,120+1);
         var dis = randomNumber(80-10,80+1);
-        var temp = randomNumber(33-10,33+1);
+        var temp = randomNumber(37-10,37+1);
 
         document.getElementById('pressaoSistolica').innerHTML = sis;
         document.getElementById('pressaoDiastolica').innerHTML = dis;
         document.getElementById('temperaturaCard').innerHTML = temp;
 
-        if(sis > 120 || dis > 80 || temp > 33) {
+        if(sis > 120 || dis > 80 || temp > 37) {
+          //var paginaHistorico = require('./HistoricScreen.js');
+          //paginaHistorico.array = array;  
+          localStorage.setItem('arrayDeValoresDoPaciente', JSON.stringify(array));
           alert("WARNING!!");
           document.getElementById("historicButton").className  = "visible";
           clearInterval(stop);
