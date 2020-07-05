@@ -4,54 +4,24 @@ function randomNumber(min, max){
 
 }
 
-function validate(min, max, defaultValue, value){
-
-    value = randomNumber(min, max);
-    if(value > defaultValue+2 || value < defaultValue-2)
-        return false;
-    else
-        return true;
-
-}
-function refreshData(){
-    $(document).ready(function(){
-        setInterval(function(){
-            var validationPressaoSis = validate(document.getElementById("PressãoPadraoSistolica").value-3,
-                document.getElementById("PressãoPadraoSistolica").value+3,
-                document.getElementById("PressãoPadraoSistolica").value,
-                document.getElementById("pressaoSistolica").value);
-            var validationPressaoDia = validate(document.getElementById("PressãoPadraoDiastolica").innerHTML-3,
-                document.getElementById("PressãoPadraoDiastolica").innerHTML+3,
-                document.getElementById("PressãoPadraoDiastolica").innerHTML,
-                document.getElementById("pressaoDiastolica").innerHTML);
-            var validationTemp = validate(document.getElementById("TemperaturaPadrao").innerHTML-3,
-                document.getElementById("TemperaturaPadrao").innerHTML+3,
-                document.getElementById("TemperaturaPadrao").innerHTML,
-                document.getElementById("Temperatura").innerHTML)+"°C";
-            $("#pressaoSistolica").load(window.location.href + "#pressaoSistolica");
-            $("#pressaoDiastolica").load(window.location.href + "#pressaoDiastolica");
-            $("#Temperatura").load(window.location.href + "#Temperatura");
-            if(!validationPressaoSis || !validationPressaoDia || !validationTemp){
-                //Chama pop-up
-            }
-        }, 1000);
-    });
-}
-
 function monitoring(){
     var array = [];
     var stop = setInterval( function() { gerarDados(array); },4000);
 
     function gerarDados(array) {
-        var sis = randomNumber(120-10,120+1);
-        var dis = randomNumber(80-10,80+1);
-        var temp = randomNumber(33-10,33+1);
+        var sis = parseInt(document.getElementById('sistolica').innerHTML);
+        var dis = parseInt(document.getElementById('diastolica').innerHTML);
+        var temp = parseInt(document.getElementById('temperatura').innerHTML);
 
-        document.getElementById('pressaoSistolica').value = sis;
-        document.getElementById('pressaoDiastolica').value = dis;
-        document.getElementById('temperaturaCard').value = temp;
+        var radomSis = randomNumber(sis-10,sis+2);
+        var radomDis = randomNumber(dis-10,dis+2);
+        var radomTemp = randomNumber(temp-10,temp+2);
 
-        if(sis > 120 || dis > 80 || temp > 33) {
+        document.getElementById('pressaoSistolica').value = radomSis + " mmHg";
+        document.getElementById('pressaoDiastolica').value = radomDis + " mmHg";
+        document.getElementById('temperaturaCard').value = radomTemp + "°C";
+
+        if(radomSis > sis || radomDis > dis || radomTemp > temp) {
           alert("WARNING!!");
           document.getElementById("historicButton").className  = "visible";
           clearInterval(stop);
@@ -66,11 +36,6 @@ function monitoring(){
         if(array.length == 5) {
           array.pop(); //Remove o utlimo elemento
         }
-
-        //Validar Tempertura e pressoes
-        //Alerta Com o pop-up
-        //Liberar historicButton
-        // Ver uma forma de enviar esse array para o historico
 
       }
 }
