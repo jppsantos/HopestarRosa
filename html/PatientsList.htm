@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/PatientListStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../css/PatientListStyle.css">
+    <link rel="stylesheet" href="../css/NavbarStyle.css">
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <title>HopStar</title>
 </head>
+
 <body>
     <div>
         <nav class="navbar navbar-expand-sm bg-light justify-content-between">
-            <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a> 
+            <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a>
             <div class="form-inline">
                 <form action="javascript:search(search.value);">
-                  <input class="form-control col " name="search" style="min-width:500px;" type="search" placeholder="Pesquise um paciente..."
-                    id="search" aria-label="Pesquise um paciente..." required>
-                  <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
+                    <input class="form-control col " name="search" style="min-width:500px;" type="search"
+                        placeholder="Pesquise um paciente..." id="search" aria-label="Pesquise um paciente..." required>
+                    <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
                 </form>
-              </div>
-    
+            </div>
+
             <!-- Exit -->
             <a class="nav-item logout" href="index.htm">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -28,29 +34,30 @@
         </nav>
 
     </div>
-    <div class="card-columns">
-        <div class="card">
-            <div class="add-patient">
-                <a href="AddPatientScreen.htm">
-                    <span class="fas fa-plus-circle"></span>
+    <div class="container card-columns mt-5 col-sm-12">
+        <div class="card ">
+            <div class="add-patient fixedHeight ">
+                <a href="AddPatientScreen.htm" class="">
+                    <i class="fas fa-plus-circle"></i>
                 </a>
             </div>
         </div>
-        <div class="card">
+        <div class="card fixedHeight text-center">
             <div class="user-icon">
-                <span class="fas fa-user"></span>
+                <i class="fas fa-user"></i>
             </div>
             <div class="card-body">
                 <h5 class="card-title">Macoy</h5>
                 <h6 class="card-text">Pressão - 12/8</h6>
                 <h6 class="card-text">Temp - 36 C</h6>
-                <div class="info-patient">
-                    <a href="#">
-                        <span class="fas fa-info-circle"></span>
-                    </a>
-                </div>
+                <input type="button" value="Monitorar" onClick="location.href = 'MonitoringScreen.htm';"
+                    class="btn btn-primary col-sm-10">
+
             </div>
+            <br>
         </div>
     </div>
+    </div>
 </body>
+
 </html>
