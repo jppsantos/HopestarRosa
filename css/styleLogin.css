@@ -2,3 +2,8 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.card {
+    margin-top: 30px;
+    border-radius: 15px;
+}

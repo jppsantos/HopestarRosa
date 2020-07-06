@@ -17,9 +17,9 @@
     <title>Histórico</title>
 </head>
 
-<body onload="mostraDadosPaciente();">
+<body onload="mostraDadosPaciente();" style="background-color:#93CAFC;">
   <div>
-    <nav class="navbar navbar-expand-sm bg-light justify-content-between">
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-between">
       <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a>
       <!-- Exit -->
       <a class="nav-item logout" href="index.htm">
@@ -28,19 +28,14 @@
     </nav>
   </div>
   <div class="container mt-5 col-md-8">
-    <div class="card text-center">
+    <div class="card text-center text-white" style="background-color:#343A3F;">
       <div class="card-body align-items-center">
         <h1>Histórico de Temperaturas</h1>
         <div class="row">
           <div class="col-sm-4">
             <div class="card-body" style="width: 70rem;">
-              <div class="card col-sm-4">
+              <div class="card col-sm-4 " style="background-color:#525B62;">
                 <div class="text-center mt-3">
-                  <!-- <svg class="bi bi-person" width="10em" height="10em" viewBox="0 0 16 16" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                  </svg> -->
                   <i class="fas fa-user fa-8x"></i>
                 </div>
                 <div id=dadosPaciente class="text-center mt-3">
@@ -69,9 +64,9 @@
 
           <div class="container col-sm-8 text-center mt-5">
             <br>
-            <input type="button" value="Pressão" onclick="pressoes();" class="btn btn-outline-secondary col-sm-3">
+            <input type="button" value="Pressão" onclick="pressoes();" class="btn btn-outline-primary col-sm-3">
             <input type="button" value="Temperatura" onclick="temperaturas();"
-              class="btn btn-outline-secondary col-sm-3">
+              class="btn btn-outline-primary col-sm-3">
             <br><br>
             <div id="lista">
               <!-- <h5 id="datetime">20/07 - 19:45 - <a id="diastolica">130 mmHg</a><a id="sistolica"> e 80 mmHg</a></h5><br>

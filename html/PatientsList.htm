@@ -15,9 +15,9 @@
     <title>HopStar</title>
 </head>
 
-<body>
+<body style="background-color:#93CAFC;">
     <div>
-        <nav class="navbar navbar-expand-sm bg-light justify-content-between">
+        <nav class="navbar navbar-expand-sm bg-dark justify-content-between">
             <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a>
             <div class="form-inline">
                 <form action="javascript:search(search.value);">
@@ -35,25 +35,24 @@
 
     </div>
     <div class="container card-columns mt-5 col-sm-12">
-        <div class="card ">
+        <div class="card " style="background-color:#343A3F;">
             <div class="add-patient fixedHeight ">
                 <a href="AddPatientScreen.htm" class="">
                     <i class="fas fa-plus-circle"></i>
                 </a>
             </div>
         </div>
-        <div class="card fixedHeight text-center">
+        <div class="card fixedHeight text-center text-white" style="background-color:#343A3F;">
             <div class="user-icon">
                 <i class="fas fa-user"></i>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Macoy</h5>
+           
+                <h5 class="">Macoy</h5>
                 <h6 class="card-text">Pressão - 12/8</h6>
                 <h6 class="card-text">Temp - 36 C</h6>
+                <br>
                 <input type="button" value="Monitorar" onClick="location.href = 'MonitoringScreen.htm';"
                     class="btn btn-primary col-sm-10">
-
-            </div>
             <br>
         </div>
     </div>
