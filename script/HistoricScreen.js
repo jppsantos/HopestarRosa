@@ -1,52 +1,38 @@
 var array;
 
-function mostraPressoes() {
+function pressoes(){
   var lista = document.getElementById('lista');
   while (lista.firstChild) {
     lista.removeChild(lista.lastChild);
   }
 
-  var h5 = document.createElement('h5');
-  h5.innerHTML = '20/07 - 19:45 - 37°C';
-
-  lista.appendChild(h5);
-}
-
-function pressoes(){
-  var lista = document.getElementById('lista');
-  var h;
-  for (let index = 0; index < array.diastolica.length; index++) { 
-    h = document.createElement('h');
-    h.innerHTML = array.data[index] + ' - ' + array.diastolica[index] + ' - ' + array.sistolica[index];
-    lista.appendChild(h);
-  }
+  array.forEach(a => {
+    var h5 = document.createElement('h5');
+    var date = new Date();
+    var dateF = ("0" + date.getDate()).substr(-2) + "/" 
+    + ("0" + (date.getMonth() + 1)).substr(-2) + "/" + date.getFullYear();
+    h5.innerHTML = dateF + ' - ' + a.diastolica + 'mmHg - ' + a.sistolica + "mmHg";
+    lista.appendChild(h5);
+  });
 }
 
 function temperaturas(){
   var lista = document.getElementById('lista');
-  var h;
-  for (let index = 0; index < array.temperatura.length; index++) { 
-    h = document.createElement('h');
-    h.innerHTML = array.data[index]+' - ' + array.temperatura[index];
-    lista.appendChild(h);
-  }
-}
-
-function mostraTemperaturas(){
-  var lista = document.getElementById('lista');
   while (lista.firstChild) {
     lista.removeChild(lista.lastChild);
   }
 
-  var h5 = document.createElement('h5');
-  h5.innerHTML = '20/07 - 19:45 - 130 mmHg e 80 mmHg';
-
-  lista.appendChild(h5);
+  array.forEach(a => {
+    var date = new Date();
+    var dateF = ("0" + date.getDate()).substr(-2) + "/" 
+    + ("0" + (date.getMonth() + 1)).substr(-2) + "/" + date.getFullYear();
+    var h5 = document.createElement('h5');
+    h5.innerHTML = dateF + ' - ' + a.temperatura + "°C";
+    lista.appendChild(h5);
+  });
+  
 }
 
-/*
- Carrega os dados do paciente no card de paciente
-*/
 function mostraDadosPaciente(){
 
   var jsonPatient = JSON.parse(sessionStorage.patient);

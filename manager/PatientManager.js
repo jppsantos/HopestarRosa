@@ -1,7 +1,8 @@
 //CARREGANDO DADOS DO PACIENTES DE ACORDO COM O RESPONSÁVEL
-function loadPatient(respID) {
+function loadPatient() {
 
-    const url = `https://vapor-projeto-hopstar.herokuapp.com/api/resp/B4C0235B-DBAC-4227-A1DD-8E6BBFFC02C9/patient`
+    const respID = sessionStorage.idManager;
+    const url = `https://vapor-projeto-hopstar.herokuapp.com/api/resp/`+ respID +`/patient`;
 
     fetch(url)
         .then(resp => resp.json())
