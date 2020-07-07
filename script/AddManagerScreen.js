@@ -36,6 +36,6 @@ function addManager() {
       }
     })
     .catch(error => {
-      console.log("deu ruim" + error)
+      console.log("deu ruim " + error)
     });
 }
