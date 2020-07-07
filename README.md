@@ -20,29 +20,30 @@ Quando os dados que foram enviados via background estiverem fora da normalidade 
 Logo após o alerta a tela de histórico será exibida automaticamente.
 
 ### Modelagem
-Fluxograma do Sistema
-Diagrama de Classes
-Diagrama de Casos de Uso
+- Fluxograma do Sistema
+- Diagrama de Classes
+- Diagrama de Casos de Uso
 
 ### Tecnologias Usadas
-Aplicação Web (Javascript)
-Vapor
-Heroku
-Git
-GitHub
+- Aplicação Web (Javascript)
+- Vapor
+- Heroku
+- Git
+- GitHub
 
 
 # Link de acesso ao site
 ### Dados para acessar a plataforma
-email: admin@hopstar.com
-senha: 12345678
+- email: admin@hopstar.com
+- senha: 12345678
 
+### Hopstar Project
 Acesse [Hopstar Project](https://jppsantos.github.io/HopestarRosa/html/).
 
 ## Integrantes do grupo
-[Aline Gomes de Brito](https://github.com/gomesalineagb)
-[Gabriel Ferraz Fontes](https://github.com/FerrazFerrara)
-[João Paulo Pareira dos Santos](https://github.com/jppsantos)
-[Lucas Henrique Pereira da Costa](https://github.com/lhcosta)
-[Victor Dângelo](https://github.com/TerrasterD)
-[Vinícius Alves](https://github.com/vinancius)
+- [Aline Gomes de Brito](https://github.com/gomesalineagb)
+- [Gabriel Ferraz Fontes](https://github.com/FerrazFerrara)
+- [João Paulo Pareira dos Santos](https://github.com/jppsantos)
+- [Lucas Henrique Pereira da Costa](https://github.com/lhcosta)
+- [Victor Dângelo](https://github.com/TerrasterD)
+- [Vinícius Alves](https://github.com/vinancius)
