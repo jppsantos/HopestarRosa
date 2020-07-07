@@ -6,6 +6,7 @@ function randomNumber(min, max) {
 
 function monitoring() {
   var array = [];
+  var cont = 0; 
   mostraDadosPaciente()
   var stop = setInterval(function () { gerarDados(array); }, 1000);
 
@@ -14,9 +15,16 @@ function monitoring() {
     var dis = parseInt(document.getElementById('diastolica').innerHTML);
     var temp = parseInt(document.getElementById('temperatura').innerHTML);
 
-    var radomSis = randomNumber(sis - 10, sis + 2);
-    var radomDis = randomNumber(dis - 10, dis + 2);
-    var radomTemp = randomNumber(temp - 10, temp + 2);
+    if(cont<5){
+      var radomSis = randomNumber(sis - 10, sis) ;
+      var radomDis = randomNumber(dis - 10, dis);
+      var radomTemp = randomNumber(temp - 10, temp);
+      cont ++;
+    }else{
+      var radomSis = randomNumber(sis - 10, sis + 2);
+      var radomDis = randomNumber(dis - 10, dis + 2);
+      var radomTemp = randomNumber(temp - 10, temp + 2);
+    }
 
     document.getElementById('pressaoSistolica').value = radomSis + " mmHg";
     document.getElementById('pressaoDiastolica').value = radomDis + " mmHg";
