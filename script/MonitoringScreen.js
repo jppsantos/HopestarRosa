@@ -6,6 +6,7 @@ function randomNumber(min, max) {
 
 function monitoring() {
   var array = [];
+  mostraDadosPaciente()
   var stop = setInterval(function () { gerarDados(array); }, 1000);
 
   function gerarDados(array) {
