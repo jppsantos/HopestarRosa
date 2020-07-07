@@ -1,50 +1,19 @@
 var array;
 
-// function mostraPressoes() {
-//   var lista = document.getElementById('lista');
-//   while (lista.firstChild) {
-//     lista.removeChild(lista.lastChild);
-//   }
-
-//   var h5 = document.createElement('h5');
-//   h5.innerHTML = '20/07 - 19:45 - 37°C';
-
-//   lista.appendChild(h5);
-// }
-
 function pressoes(){
   var lista = document.getElementById('lista');
   while (lista.firstChild) {
     lista.removeChild(lista.lastChild);
   }
 
-
-
-  const parameters = {
-    headers: {
-      "Content-Type": "application/json"
-    },
-    mode: "no-cors",
-  };
-
-  fetch("https://vapor-projeto-hopstar.herokuapp.com/api/7CC16353-52CF-4194-A1F1-057B0EC4CB91/pressures", parameters)
-    .then(resp => resp)
-    .then(json => {
-
-      alert(json.diastolic)
-    })
-    .catch(error => {
-      console.log("deu ruim pressao" + error)
-    });
-
-
-
-  // var h5;
-  // for (let index = 0; index < array.diastolica.length; index++) { 
-  //   h5 = document.createElement('h5');
-  //   h5.innerHTML = array.data[index] + ' - ' + array.diastolica[index] + ' - ' + array.sistolica[index];
-  //   lista.appendChild(h5);
-  // }
+  array.forEach(a => {
+    var h5 = document.createElement('h5');
+    var date = new Date();
+    var dateF = ("0" + date.getDate()).substr(-2) + "/" 
+    + ("0" + (date.getMonth() + 1)).substr(-2) + "/" + date.getFullYear();
+    h5.innerHTML = dateF + ' - ' + a.diastolica + 'mmHg - ' + a.sistolica + "mmHg";
+    lista.appendChild(h5);
+  });
 }
 
 function temperaturas(){
@@ -53,29 +22,17 @@ function temperaturas(){
     lista.removeChild(lista.lastChild);
   }
 
-  var h5;
-  for (let index = 0; index < array.temperatura.length; index++) { 
-    h5 = document.createElement('h5');
-    h5.innerHTML = array.data[index]+' - ' + array.temperatura[index];
+  array.forEach(a => {
+    var date = new Date();
+    var dateF = ("0" + date.getDate()).substr(-2) + "/" 
+    + ("0" + (date.getMonth() + 1)).substr(-2) + "/" + date.getFullYear();
+    var h5 = document.createElement('h5');
+    h5.innerHTML = dateF + ' - ' + a.temperatura + "°C";
     lista.appendChild(h5);
-  }
+  });
+  
 }
 
-// function mostraTemperaturas(){
-//   var lista = document.getElementById('lista');
-//   while (lista.firstChild) {
-//     lista.removeChild(lista.lastChild);
-//   }
-
-//   var h5 = document.createElement('h5');
-//   h5.innerHTML = '20/07 - 19:45 - 130 mmHg e 80 mmHg';
-
-//   lista.appendChild(h5);
-// }
-
-/*
- Carrega os dados do paciente no card de paciente
-*/
 function mostraDadosPaciente(){
 
   var jsonPatient = JSON.parse(sessionStorage.patient);
@@ -94,5 +51,4 @@ function mostraDadosPaciente(){
 
 function setArray(){
   array = JSON.parse(localStorage.getItem('arrayDeValoresDoPaciente'));
-  alert(array.temperatura);
 }

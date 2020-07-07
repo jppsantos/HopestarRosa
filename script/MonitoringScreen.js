@@ -28,41 +28,41 @@ function monitoring() {
       clearInterval(stop);
     }
 
-    var date = new Date();
-
     const pressure = {
-      diastolic: 1,
-      systolic: 1,
+      diastolic: radomSis,
+      systolic: radomDis,
       patient: {
-        id: "7CC16353-52CF-4194-A1F1-057B0EC4CB91"
+        id: "AA813EF7-56A6-4D2E-9EB8-F66DA3E2DC2A"
       }
     }
 
     const temperature = {
-      value: 1,
+      value: radomTemp,
       patient: {
-        id: "7CC16353-52CF-4194-A1F1-057B0EC4CB91"
+        id: "AA813EF7-56A6-4D2E-9EB8-F66DA3E2DC2A"
       }
     }
 
-    // var dados = {sistolica: sis , 
-    //   diastolica: dis, 
-    //   temperatura: temp, 
-    //   data: date}; // Cria um array com "members"
+    var dados = {
+      sistolica: radomSis , 
+      diastolica: radomDis, 
+      temperatura: radomTemp, 
+    }; // Cria um array com "members"
 
     const parametersP = {
       headers: {
         "Content-Type": "application/json"
       },
-      mode: "no-cors",
       body: JSON.stringify(pressure),
       method: "POST"
     };
 
     fetch("https://vapor-projeto-hopstar.herokuapp.com/api/pressure", parametersP)
-      .then(resp => resp)
+      .then(r => r.json().then(json => ({ status: r.status, body: json })))
       .then(json => {
-        console.log(json)
+        if (json.status != 200) {
+          alert("Erro no cadastro, Tente novamente!");
+        } 
       })
       .catch(error => {
         console.log("deu ruim pressao" + error)
@@ -73,26 +73,23 @@ function monitoring() {
       headers: {
         "Content-Type": "application/json"
       },
-      mode: "no-cors",
       body: JSON.stringify(temperature),
       method: "POST"
     };
 
     fetch("https://vapor-projeto-hopstar.herokuapp.com/api/temperature", parametersT)
-      .then(resp => resp)
+      .then(r => r.json().then(json => ({ status: r.status, body: json })))
       .then(json => {
-        console.log(json)
+        if (json.status != 200) {
+          alert("Erro no cadastro, Tente novamente!");
+        } 
       })
       .catch(error => {
         console.log("deu ruim temperatura" + error)
       });
 
-    // array.unshift(dados); //Adiciona no inicio do array
-
-    // if(array.length == 5) {
-    //   array.pop(); //Remove o utlimo elemento
-    // }
-
+    array.unshift(dados); //Adiciona no inicio do array
+    localStorage.setItem('arrayDeValoresDoPaciente', JSON.stringify(array));
   }
 }
 
