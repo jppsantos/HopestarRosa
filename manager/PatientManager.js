@@ -4,13 +4,13 @@ function loadPatient(respID) {
     const url = `https://vapor-projeto-hopstar.herokuapp.com/api/resp/B4C0235B-DBAC-4227-A1DD-8E6BBFFC02C9/patient`
 
     fetch(url)
-    .then(resp => resp.json())
-    .then(json => {
-        createPatientList(json)
-    })
-    .catch(error => {
-        console.log(error)
-    })
+        .then(resp => resp.json())
+        .then(json => {
+            createPatientList(json)
+        })
+        .catch(error => {
+            console.log(error)
+        })
 }
 
 //CRIANDO LISTA DE PACIENTES DO RESPONSÁVEL
@@ -53,9 +53,13 @@ function createPatientList(patients) {
         monitorBtn.className = 'btn btn-primary col-sm-10'
         monitorBtn.href = "MonitoringScreen.htm"
         monitorBtn.innerText = 'Monitorar'
+        monitorBtn.addEventListener("click", function () {
+            sessionStorage.setItem('patient', JSON.stringify(patient));
+            window.parent.location = "../html/MonitoringScreen.htm";
+        })
         card.appendChild(monitorBtn)
 
-        card.appendChild(document.createElement('BR'))
+        // card.appendChild(document.createElement('BR'))
 
         document.getElementById('patient-list').appendChild(card)
     }
@@ -69,3 +73,7 @@ $(document).ready(function(){
 		});
 	});
 });
+
+function vaiPageMonitora(patient) {
+
+}

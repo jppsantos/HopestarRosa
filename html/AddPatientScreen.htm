@@ -1,7 +1,7 @@
 <html>
 <head>
     <script type="text/javascript" src="script/HistoricScreen.js"></script>
-    <script src="../script/AddPatientScreen.js"></script>
+    <script type="text/javascript" src="../script/AddPatient.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/PatientListStyle.css">
@@ -26,7 +26,7 @@
             <div class="card text-center text-white" style="background-color:#343A3F;">
                 <div class="card-body align-items-center">
                     <h1>Cadastrar Paciente</h1>
-                    <form name ="addUserForm" action="../script/AddPatientScreen.js" onsubmit="return sendPatient()" method="post" class="mt-5">
+                    <form name ="addUserForm" action="javascript:sendPatient();" method="post" class="mt-5">
                         <div class="text-left">
 
                             <div class="form-group row center-block col-sm-12">
@@ -49,9 +49,9 @@
                                 <div class="form-group col-sm-2">
                                     <label class="">Sexo</label>
                                     <div class="">
-                                        <select name="sex" id="sex" class="col-sm-12">
-                                            <option value="1">Feminino</option>
-                                            <option value="0">Masculino</option>
+                                        <select name="genre" id="genre" class="col-sm-12">
+                                            <option value="F">Feminino</option>
+                                            <option value="M">Masculino</option>
                                         </select>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                     <label class="">Temperatura Padrão</label>
                                     <div class="">
                                         <input type="text" class="form-control" name="temperature" placeholder="Apenas números"
-                                            id="temperature" pattern="0-9]{2}"
+                                            id="temperature" pattern="[0-9]{2}"
                                             title="Digite uma temperatura do seu paciente."
                                             required>
                                     </div>
