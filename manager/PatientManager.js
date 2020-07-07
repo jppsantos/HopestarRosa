@@ -33,6 +33,7 @@ function createPatientList(patients) {
         card.appendChild(divIcon)
 
         var nameView = document.createElement('H5')
+        nameView.className = "card-text"
         nameView.innerHTML += patient.name
         card.appendChild(nameView)
 
@@ -59,3 +60,12 @@ function createPatientList(patients) {
         document.getElementById('patient-list').appendChild(card)
     }
 }
+
+$(document).ready(function(){
+	$("#search-name").on("keyup", function(){
+		var value = $(this).val().toLowerCase();
+		$(".card .patient-name").filter(function(){
+			$(this).parent().toggle($(this).value().toLowerCase().indexOf(value)>=0)
+		});
+	});
+});
