@@ -5,6 +5,9 @@ function randomNumber(min, max){
 }
 
 function monitoring(){
+    // carrega os dados do paciente no card de paciente
+    mostraDadosPaciente();
+
     var array = [];
     var stop = setInterval( function() { gerarDados(array); },1000);
 
@@ -39,4 +42,21 @@ function monitoring(){
         }
 
       }
+}
+
+/*
+ Carrega os dados do paciente no card de paciente
+*/
+function mostraDadosPaciente(){
+
+  var jsonPatient = JSON.parse(sessionStorage.patient);
+  
+  document.getElementById('nomePaciente').innerHTML = jsonPatient.name;
+  document.getElementById('sexo').innerHTML = jsonPatient.genre;
+  document.getElementById('endereco').innerHTML = jsonPatient.address;
+  document.getElementById('idade').innerHTML = jsonPatient.age;
+  document.getElementById('temperatura').innerHTML = jsonPatient.defaultTemp.value;
+  document.getElementById('diastolica').innerHTML = jsonPatient.defaultPressure.diastolic;
+  document.getElementById('sistolica').innerHTML = jsonPatient.defaultPressure.systolic;
+
 }

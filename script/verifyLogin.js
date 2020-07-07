@@ -36,11 +36,9 @@ function verifyLogin(){
     };
 
     fetch(url,parameters)
-    // .then(resp => resp)
     .then (r => r.json().then(data => ({status: r.status, body: data})))
     .then(data => {
          if (data.status == 200) {
-            // var json = await response.json();
             sessionStorage.setItem("idManager", data.body.id);
             window.location.href = "../html/PatientsList.htm";
         }

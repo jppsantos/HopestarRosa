@@ -44,15 +44,20 @@ function mostraTemperaturas(){
   lista.appendChild(h5);
 }
 
+/*
+ Carrega os dados do paciente no card de paciente
+*/
 function mostraDadosPaciente(){
 
-  var nome = document.getElementById('nomePaciente');
-  var sexo = document.getElementById('sexo');
-  var endereco = document.getElementById('endereco');
-  var idade = document.getElementById('idade');
-  var temperatura = document.getElementById('temperatura');
-  var diastolica = document.getElementById('diastolica');
-  var sistolica = document.getElementById('sistolcia');
+  var jsonPatient = JSON.parse(sessionStorage.patient);
+  
+  document.getElementById('nomePaciente').innerHTML = jsonPatient.name;
+  document.getElementById('sexo').innerHTML = jsonPatient.genre;
+  document.getElementById('endereco').innerHTML = jsonPatient.address;
+  document.getElementById('idade').innerHTML = jsonPatient.age;
+  document.getElementById('temperatura').innerHTML = jsonPatient.defaultTemp.value;
+  document.getElementById('diastolica').innerHTML = jsonPatient.defaultPressure.diastolic;
+  document.getElementById('sistolica').innerHTML = jsonPatient.defaultPressure.systolic;
 
   setArray();
   pressoes();
