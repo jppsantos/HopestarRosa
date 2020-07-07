@@ -54,7 +54,7 @@ function createPatientList(patients) {
         monitorBtn.innerText = 'Monitorar'
         card.appendChild(monitorBtn)
 
-        card.appendChild(document.createElement('BR'))
+        // card.appendChild(document.createElement('BR'))
 
         document.getElementById('patient-list').appendChild(card)
     }
