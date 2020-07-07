@@ -1,62 +1,43 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="../css/PatientListStyle.css">
-    <link rel="stylesheet" href="../css/NavbarStyle.css">
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <title>HopStar</title>
-</head>
-
-<body style="background-color:#93CAFC;">
-    <div>
-        <nav class="navbar navbar-expand-sm bg-dark justify-content-between">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="../css/PatientListStyle.css">
+      <link rel="stylesheet" href="../css/NavbarStyle.css">
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="/manager/PatientManager.js"></script>
+      <title>HopStar</title>
+   </head>
+   <body style="background-color:#93CAFC;" onload="loadPatient(false);">
+      <div>
+         <nav class="navbar navbar-expand-sm bg-dark justify-content-between">
             <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a>
             <div class="form-inline">
-                <form action="javascript:search(search.value);">
-                    <input class="form-control col " name="search" style="min-width:500px;" type="search"
-                        placeholder="Pesquise um paciente..." id="search" aria-label="Pesquise um paciente..." required>
-                    <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
-                </form>
+               <form action="javascript:search(search.value);">
+                  <input class="form-control col " name="search" style="min-width:500px;" type="search"
+                     placeholder="Pesquise um paciente..." id="search" aria-label="Pesquise um paciente..." required>
+                  <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
+               </form>
             </div>
-
             <!-- Exit -->
             <a class="nav-item logout" href="index.htm">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
             </a>
-        </nav>
-
-    </div>
-    <div class="container card-columns mt-5 col-sm-12">
-        <div class="card " style="background-color:#343A3F;">
+         </nav>
+      </div>
+      <div id="patient-list" class="container card-columns mt-5 col-sm-12">
+         <div class="card " style="background-color:#343A3F;">
             <div class="add-patient fixedHeight ">
-                <a href="AddPatientScreen.htm" class="">
-                    <i class="fas fa-plus-circle"></i>
-                </a>
+               <a href="AddPatientScreen.htm" class="">
+               <i class="fas fa-plus-circle"></i>
+               </a>
             </div>
-        </div>
-        <div class="card fixedHeight text-center text-white" style="background-color:#343A3F;">
-            <div class="user-icon">
-                <i class="fas fa-user"></i>
-            </div>
-           
-                <h5 class="">Macoy</h5>
-                <h6 class="card-text">Pressão - 12/8</h6>
-                <h6 class="card-text">Temp - 36 C</h6>
-                <br>
-                <input type="button" value="Monitorar" onClick="location.href = 'MonitoringScreen.htm';"
-                    class="btn btn-primary col-sm-10">
-            <br>
-        </div>
-    </div>
-    </div>
-</body>
-
+         </div>
+      </div>
+   </body>
 </html>
