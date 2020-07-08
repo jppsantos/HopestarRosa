@@ -30,14 +30,18 @@ function monitoring() {
     document.getElementById('pressaoDiastolica').value = radomDis + " mmHg";
     document.getElementById('temperaturaCard').value = radomTemp + "°C";
 
+    var jsonPatient = JSON.parse(sessionStorage.patient);
+
     if (radomSis > sis || radomDis > dis || radomTemp > temp) {
-      alert("WARNING!!");
+      var msg = radomTemp > temp ? "Temperatura" : "Pressao";
+      var name = jsonPatient.name
+      name = name.substring(0,20);
+
+      alert("🚨 ATENÇÃO! 🚨 " + msg + " fora da normalidade. Dirija-se ao terminal de " + name + "...");
       //beep
       document.getElementById("historicButton").className = "visible";
       clearInterval(stop);
     }
-
-    var jsonPatient = JSON.parse(sessionStorage.patient);
 
     const pressure = {
       diastolic: radomSis,
