@@ -33,19 +33,25 @@ function createPatientList(patients) {
         divIcon.appendChild(icon)
         card.appendChild(divIcon)
 
+        var divNames = document.createElement('DIV')
+        divNames.className = 'col-sm-12'
+
         var nameView = document.createElement('H5')
         nameView.innerHTML += patient.name
-        card.appendChild(nameView)
+        
+        divNames.appendChild(nameView)
 
         var pressureView = document.createElement('H6')
         pressureView.className = 'card-text'
         pressureView.innerHTML += `Pressão - ${patient.defaultPressure.systolic}/${patient.defaultPressure.diastolic}`
-        card.appendChild(pressureView)
+        divNames.appendChild(pressureView)
 
         var tempView = document.createElement('H6')
         tempView.className = 'card-text'
         tempView.innerHTML += `Temp - ${patient.defaultTemp.value} &degC`
-        card.appendChild(tempView)
+        divNames.appendChild(tempView)
+
+        card.appendChild(divNames)
 
         card.appendChild(document.createElement('BR'))
 
