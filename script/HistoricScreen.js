@@ -11,7 +11,7 @@ function pressoes(){
     var date = new Date();
     var dateF = ("0" + date.getDate()).substr(-2) + "/" 
     + ("0" + (date.getMonth() + 1)).substr(-2) + "/" + date.getFullYear();
-    h5.innerHTML = dateF + ' - ' + a.diastolica + 'mmHg - ' + a.sistolica + "mmHg";
+    h5.innerHTML =  a.diastolica + 'mmHg - ' + a.sistolica + "mmHg" + ' - ' + dateF;
     lista.appendChild(h5);
   });
 }
@@ -27,7 +27,7 @@ function temperaturas(){
     var dateF = ("0" + date.getDate()).substr(-2) + "/" 
     + ("0" + (date.getMonth() + 1)).substr(-2) + "/" + date.getFullYear();
     var h5 = document.createElement('h5');
-    h5.innerHTML = dateF + ' - ' + a.temperatura + "°C";
+    h5.innerHTML =  a.temperatura + "°C" + ' - ' + dateF;
     lista.appendChild(h5);
   });
   
