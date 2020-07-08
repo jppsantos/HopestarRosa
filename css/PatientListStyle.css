@@ -2,6 +2,7 @@
     margin-top: 30px;
     border-radius: 15px;
     background-color: #343A3F;
+    display: grid;
 }
 
 .fixedHeight {
@@ -9,14 +10,14 @@
 }
 
 .card-columns {
+    padding: 20px 50px;
+    column-gap: 2rem;
     column-count: 5;
-    padding: 20px 70px;
-    column-gap: 4rem;
 }
 
 .add-patient {
     text-align: center;
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
 
 .user-icon {
@@ -27,4 +28,23 @@
 .info-patient {
     text-align: right;
     font-size: 20px;
+}
+
+@media (max-width: 700px) {
+    .card-columns {
+      -moz-column-count: 3;
+      column-count: 3;
+      -moz-column-gap: 1.25rem;
+      column-gap: 1.25rem;
+    }
+  }
+
+
+@media (max-width: 500px) {
+    .card-columns {
+      -moz-column-count: 2;
+      column-count: 2;
+      -moz-column-gap: 1.25rem;
+      column-gap: 1.25rem;
+    }
 }

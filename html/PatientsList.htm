@@ -9,32 +9,22 @@
       <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="../css/PatientListStyle.css">
       <link rel="stylesheet" href="../css/NavbarStyle.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="../manager/PatientManager.js"></script>
       <title>HopStar</title>
    </head>
    <body style="background-color:#93CAFC;" onload="loadPatient();">
-      <div>
-         <nav class="navbar navbar-expand-sm bg-dark justify-content-between">
-            <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a>
-            <div class="form-inline">
-                  <input id="search-name" class="form-control col" name="search" style="min-width:500px;" type="search"
-                     placeholder="Pesquise um paciente..." aria-label="Pesquise um paciente..." required>
-            </div>
-            <!-- Exit -->
-            <a class="nav-item logout" href="index.htm">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </a>
-         </nav>
-      </div>
-      <div id="patient-list" class="container card-columns mt-5 col-sm-12">
-         <div class="card col-sm-12" style="background-color:#343A3F;">
-            <div class="add-patient fixedHeight ">
-               <a href="AddPatientScreen.htm" class="">
-               <i class="fas fa-plus-circle"></i>
-               </a>
-            </div>
+      <nav class="navbar navbar-expand-sm bg-dark justify-content-between">
+         <a class="navbar-brand" href="PatientsList.htm">HOPSTAR</a>
+         <div class="form-inline">
+               <input id="search-name" class="form-control col" name="search" style="min-width:500px;" type="search"
+                  placeholder="Pesquise um paciente..." aria-label="Pesquise um paciente...">
          </div>
-      </div>
+         <!-- Exit -->
+         <a class="nav-item logout" href="index.htm">
+         <i class="fa fa-sign-out" aria-hidden="true"></i>
+         </a>
+      </nav>
    </body>
 </html>

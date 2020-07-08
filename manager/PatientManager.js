@@ -14,8 +14,28 @@ function loadPatient() {
         })
 }
 
+
 //CRIANDO LISTA DE PACIENTES DO RESPONSÁVEL
 function createPatientList(patients) {
+
+    var view = document.createElement('DIV')
+    view.id = "patient-list"
+    view.className = 'container-fluid card-columns'
+
+    var addPatientCard = document.createElement('DIV')
+    addPatientCard.className = "card add-patient fixedHeight"
+
+    var destination = document.createElement('A')
+    destination.href = "AddPatientScreen.htm"
+    destination.className = "add-patient centralizar"
+
+    var icon = document.createElement('I')
+    icon.className = "fas fa-plus-circle"
+    destination.appendChild(icon)
+
+    addPatientCard.appendChild(destination)
+
+    view.appendChild(addPatientCard)
 
     for (var index in patients) {
 
@@ -54,27 +74,23 @@ function createPatientList(patients) {
         monitorBtn.className = 'btn btn-primary col-sm-10'
         monitorBtn.href = "MonitoringScreen.htm"
         monitorBtn.innerText = 'Monitorar'
+
         monitorBtn.addEventListener("click", function () {
             sessionStorage.setItem('patient', JSON.stringify(patient));
             window.parent.location = "../html/MonitoringScreen.htm";
         })
         card.appendChild(monitorBtn)
-
-        // card.appendChild(document.createElement('BR'))
-
-        document.getElementById('patient-list').appendChild(card)
+        view.appendChild(card)
     }
+
+    document.body.appendChild(view)
 }
 
 $(document).ready(function(){
-	$("#search-name").on("keyup", function(){
-		var value = $(this).val().toLowerCase();
-		$(".card .patient-name").filter(function(){
-			$(this).parent().toggle($(this).value().toLowerCase().indexOf(value)>=0)
-		});
-	});
-});
-
-function vaiPageMonitora(patient) {
-
-}
+    $("#search-name").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
