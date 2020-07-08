@@ -67,22 +67,23 @@ function createPatientList(patients) {
         card.appendChild(divIcon)
 
         var divNames = document.createElement('DIV')
-        divNames.className = 'card-body'
+        divNames.className = ''
+        divNames.appendChild(document.createElement('BR'))
 
         var nameView = document.createElement('H5')
-        nameView.className = "card-text name"
+        nameView.className = ""
 
         card.appendChild(nameView)
         var name = patient.name
 
-        if (name.length > 22) {
-            name = name.substring(0,22);
+        if (name.length > 20) {
+            name = name.substring(0,20);
             nameView.innerHTML = name + "...";
         } else {
             nameView.innerHTML += name
-            if (name.length < 18) {
-                divNames.appendChild(document.createElement('BR'))
-            }
+            // if (name.length < 18) {
+            //     divNames.appendChild(document.createElement('BR'))
+            // }
             
         }        
         divNames.appendChild(nameView)
@@ -97,13 +98,11 @@ function createPatientList(patients) {
         tempView.innerHTML += `Temp - ${patient.defaultTemp.value} &degC`
         divNames.appendChild(tempView)
 
-        card.appendChild(divNames)
-
-        card.appendChild(divNames)
-        card.appendChild(document.createElement('BR'))
+        // card.appendChild(document.createElement('BR'))
+        divNames.appendChild(document.createElement('BR'))
 
         var monitorBtn = document.createElement('A')
-        monitorBtn.className = 'btn btn-primary col-sm-10'
+        monitorBtn.className = 'btn btn-primary col-sm-10 footer'
         monitorBtn.href = "MonitoringScreen.htm"
         monitorBtn.innerText = 'Monitorar'
 
@@ -113,6 +112,7 @@ function createPatientList(patients) {
         })
 
         divNames.appendChild(monitorBtn)
+        card.appendChild(divNames)
 
         var column = document.createElement('DIV')
         column.className = 'col-sm-3'
