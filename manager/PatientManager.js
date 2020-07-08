@@ -46,6 +46,10 @@ function createPatientList(patients) {
 
     view.appendChild(column)
 
+    var rowElement = document.createElement("div");
+        rowElement.setAttribute("class","row");
+        rowElement.setAttribute("id", "rowThatWraps");
+
     for (var index in patients) {
 
         const patient = patients[index]
@@ -92,11 +96,8 @@ function createPatientList(patients) {
         tempView.className = 'card-text'
         tempView.innerHTML += `Temp - ${patient.defaultTemp.value} &degC`
         divNames.appendChild(tempView)
-<<<<<<< HEAD
 
         card.appendChild(divNames)
-=======
->>>>>>> master
 
         card.appendChild(divNames)
         card.appendChild(document.createElement('BR'))
