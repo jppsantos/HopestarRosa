@@ -37,8 +37,17 @@ function createPatientList(patients) {
         divNames.className = 'col-sm-12'
 
         var nameView = document.createElement('H5')
-        nameView.innerHTML += patient.name
-        
+        var name = patient.name
+        if (name.length > 22) {
+            name = name.substring(0,22);
+            nameView.innerHTML = name + "...";
+        } else {
+            nameView.innerHTML += name
+            if (name.length < 18) {
+                divNames.appendChild(document.createElement('BR'))
+            }
+            
+        }        
         divNames.appendChild(nameView)
 
         var pressureView = document.createElement('H6')
