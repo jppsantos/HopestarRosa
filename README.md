@@ -51,7 +51,7 @@ Acesse [aqui](https://github.com/lhcosta/Vapor-ProjetoHopStar).
 ## Integrantes do grupo
 - [Aline Gomes de Brito](https://github.com/gomesalineagb)
 - [Gabriel Ferraz Fontes](https://github.com/FerrazFerrara)
-- [João Paulo Pareira dos Santos](https://github.com/jppsantos)
+- [João Paulo Pereira dos Santos](https://github.com/jppsantos)
 - [Lucas Henrique Pereira da Costa](https://github.com/lhcosta)
 - [Victor Dângelo](https://github.com/TerrasterD)
 - [Vinícius Alves](https://github.com/vinancius)
