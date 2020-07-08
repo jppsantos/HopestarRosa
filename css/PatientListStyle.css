@@ -28,3 +28,10 @@
     text-align: right;
     font-size: 20px;
 }
+
+.centralizar {
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center 
+}
