@@ -37,18 +37,20 @@ function monitoring() {
       clearInterval(stop);
     }
 
+    var jsonPatient = JSON.parse(sessionStorage.patient);
+
     const pressure = {
       diastolic: radomSis,
       systolic: radomDis,
       patient: {
-        id: "AA813EF7-56A6-4D2E-9EB8-F66DA3E2DC2A"
+        id: jsonPatient.id
       }
     }
 
     const temperature = {
       value: radomTemp,
       patient: {
-        id: "AA813EF7-56A6-4D2E-9EB8-F66DA3E2DC2A"
+        id: jsonPatient.id
       }
     }
 
@@ -70,7 +72,7 @@ function monitoring() {
       .then(r => r.json().then(json => ({ status: r.status, body: json })))
       .then(json => {
         if (json.status != 200) {
-          alert("Erro no cadastro, Tente novamente!");
+          console.log("Erro no cadastro, Tente novamente!");
         } 
       })
       .catch(error => {
@@ -90,7 +92,7 @@ function monitoring() {
       .then(r => r.json().then(json => ({ status: r.status, body: json })))
       .then(json => {
         if (json.status != 200) {
-          alert("Erro no cadastro, Tente novamente!");
+          console.log("Erro no cadastro, Tente novamente!");
         } 
       })
       .catch(error => {
