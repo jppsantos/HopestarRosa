@@ -28,9 +28,13 @@ Logo após o alerta a tela de histórico será exibida automaticamente.
 - Aplicação Web (Javascript)
 - Vapor
 - Heroku
+- PostgreSQL
 - Git
 - GitHub
 
+**Editores**
+- Visual Studio Code
+- Atom
 
 # Link de acesso ao site
 ### Dados para acessar a plataforma
@@ -39,6 +43,10 @@ Logo após o alerta a tela de histórico será exibida automaticamente.
 
 ### Hopstar Project
 Acesse [Hopstar Project](https://jppsantos.github.io/HopestarRosa/html/).
+
+
+### Repositório com Vapor
+Acesse [aqui](https://github.com/lhcosta/Vapor-ProjetoHopStar).
 
 ## Integrantes do grupo
 - [Aline Gomes de Brito](https://github.com/gomesalineagb)
