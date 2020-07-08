@@ -129,6 +129,7 @@ function filterPatient() {
 
     var searchName = document.getElementById('search-name').value.toLowerCase();
     var patients = document.getElementById('patient-list').getElementsByClassName('patient')
+    var addPatient = document.getElementById('patient-list').getElementsByClassName('add-patient')
 
     for(var i=0; i<patients.length; i++) {
         var patient = patients[i]
@@ -136,8 +137,10 @@ function filterPatient() {
 
         if (name.toLowerCase().indexOf(searchName) > -1) {
             patients[i].style.display = ""
+            addPatient[0].style.display = ""
         } else {
             patients[i].style.display = "none"
+            addPatient[0].style.display = "none"
         }
     }
 }
