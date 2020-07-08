@@ -82,8 +82,6 @@ function sendPatient () {
     var diastolicPressure = parseFloat(document.getElementById("diastolicPressure").value);
     var temperature = parseFloat(document.getElementById("temperature").value);
 
-     alert(idManager + username + genrePatient + addressPatient + agePatient + systolicPressure + diastolicPressure + temperature);
-
     const jsonData = {
         age : agePatient,
         address : addressPatient,

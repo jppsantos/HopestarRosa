@@ -2,17 +2,10 @@
     margin-top: 30px;
     border-radius: 15px;
     background-color: #343A3F;
-    display: grid;
 }
 
 .fixedHeight {
     height: 325px;
-}
-
-.card-columns {
-    padding: 20px 50px;
-    column-gap: 2rem;
-    column-count: 5;
 }
 
 .add-patient {
@@ -28,6 +21,13 @@
 .info-patient {
     text-align: right;
     font-size: 20px;
+}
+
+a.centralizar {
+    height: 3.75em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center 
 }
 
 @media (max-width: 700px) {
