@@ -41,9 +41,9 @@ Logo após o alerta a tela de histórico será exibida automaticamente.
 - email: admin@hopstar.com
 - senha: 12345678
 
-### Hopstar Project
-Acesse [Hopstar Project](https://jppsantos.github.io/HopestarRosa/html/).
+### Hopstar Project 
 
+ [![homeScreen](docsAuxiliares/home.png)](https://jppsantos.github.io/HopestarRosa/html/).
 
 ### Repositório com Vapor
 Acesse [aqui](https://github.com/lhcosta/Vapor-ProjetoHopStar).
