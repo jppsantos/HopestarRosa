@@ -43,7 +43,7 @@ Logo após o alerta a tela de histórico será exibida automaticamente.
 
 ### Hopstar Project 
 
- [![homeScreen](docsAuxiliares/home.png)](https://jppsantos.github.io/HopestarRosa/html/).
+ [![homeScreen](docsAuxiliares/home.png)](https://jppsantos.github.io/HopestarRosa/html/)
 
 ### Repositório com Vapor
 Acesse [aqui](https://github.com/lhcosta/Vapor-ProjetoHopStar).
